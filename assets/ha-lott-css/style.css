@@ -1,0 +1,169 @@
+body{
+	background: url(../img/bg.png) repeat-x;
+
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+	z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+	background: url()
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}.logo {
+	display: block;
+	margin: 30px auto;
+	width: 30%;
+	height: auto;
+}
+.cloud1 {
+	display: block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 20%;
+	height: auto;
+}
+.cloud2 {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 20%;
+	height: auto;
+}
+.pic {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 10%;
+	width: 80%;
+	height: auto;
+}
+
+.bg {
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.machine {
+	width: 1366px;
+	height: 507px;
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.machine-skin {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	z-index: 10;
+}
+.machine-bg {
+	position: absolute;
+	top: 100px;
+	left: 705px;
+	z-index: 0;
+}
+.light {
+	position: absolute;
+	z-index: 20;
+	top: 49px;
+	left: 147px;
+}
+
+@keyframes shineroller{
+0%{
+	transform: rotate(0);
+  }
+50%{
+	transform:rotate(200deg);
+}
+100%{
+	 transform: rotate(1);
+	}
+}
+.shineroller{
+	z-index:9999;
+	width: 800px;
+	height: 800px;
+	top: 50%;
+	left: 50%;
+    transition: 0.5s;
+    transform-origin: 400px 400px;
+    animation: shineroller 10s linear infinite;  /*开始动画后无限循环，用来控制rotate*/
+}
+
+
+.shineroller {
+	display: block;
+	position: absolute;
+	width: 800PX;
+	height: 800px;
+	transform: translate(-50%,-50%);
+}
