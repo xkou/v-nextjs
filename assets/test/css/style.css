@@ -1,0 +1,50 @@
+  html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+      body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+
+
+        #btn-close-modal {
+                  width:100%;
+                  text-align: center;
+                  cursor:pointer;
+                  color:#fff;
+              }
+         #demo02{ }
+.city1-map{ background: #0b7bab; width:800px; }
+.city1-map img{ position: absolute; bottom: 0px;  height: 100%; width: auto;}
