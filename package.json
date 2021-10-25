@@ -8,10 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@node-minify/core": "^6.2.0",
+    "@node-minify/uglify-js": "^6.2.0",
     "acorn": "^8.5.0",
     "babel-plugin-transform-es2017-object-entries": "^0.0.5",
     "htmldom": "^4.0.11",
     "next": "10.x",
+    "node-minify": "^3.6.0",
     "react": "17.x",
     "react-dom": "17.x",
     "vue-template-compiler": "^2.6.14",

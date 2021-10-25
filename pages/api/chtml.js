@@ -82,7 +82,6 @@ function handle_new_vue(t, rep, sub){
 export default (req, res) => {
     res.statusCode = 200
     dom = hd(req.body.html)
-    console.log(dom)
     let root = dom.root()
     for(let k of root){
         handle(k)

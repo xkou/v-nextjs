@@ -81,6 +81,21 @@ def test_chtml():
     print(r.text)
 
 
+def test_minifyjs():
+
+    d = {
+        'js': """
+    function test(){
+        let a = 1
+        let b = 2
+        console.log(a+b)
+    }
+        """
+    }
+
+    r = requests.post('http://localhost:3000/api/justminify', json=d)
+    print(r.text)
+
 
 if __name__=='__main__':
     globals()[sys.argv[1]]()
