@@ -11,3 +11,5 @@ export default (req, res) => {
   let c = compiler.compile(j.html, options)
   res.json(c)
 }
+
+// python3 tools/t.py test_vuecompile
