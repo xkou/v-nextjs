@@ -23,8 +23,18 @@ const options = {
     ]
 
   }
-export default (req, res) => {
+export default async (req, res) => {
   res.statusCode = 200
-  let c = babel.transformSync(req.body.js, options)
-  res.json(c)
+  function f(x){
+    babel.transform(req.body.js, options, function(err, result){
+      if(err){
+        res.status(500).json(err)
+        x()
+        return
+      }
+      res.end(result.code)
+      x()
+    })
+  }
+  return new Promise(x=>f(x))
 }

@@ -97,5 +97,17 @@ def test_minifyjs():
     print(r.text)
 
 
+def test_cjs_babel():
+    r = requests.get('http://10.1.1.16/hrtest/assets/js/ue.js')
+    d = {
+        'js': r.text
+    }
+    r = requests.post('http://localhost:3000/api/cjs', json=d)
+    d = {
+        'js': r.text
+    }
+    r = requests.post('http://localhost:3000/api/justbabel', json=d)
+    print(r.text)
+
 if __name__=='__main__':
     globals()[sys.argv[1]]()
