@@ -77,7 +77,7 @@ def test_chtml():
         """
     }
 
-    r = requests.post('http://localhost:3000/api/chtml', json=d)
+    r = requests.post('http://localhost:3001/api/chtml', json=d)
     print(r.text)
 
 
@@ -107,6 +107,10 @@ def test_cjs_babel():
         'js': r.text
     }
     r = requests.post('http://localhost:3000/api/justbabel', json=d)
+    print(r.text)
+
+def test_readability():
+    r = requests.get('http://localhost:3001/readability?test=1')
     print(r.text)
 
 if __name__=='__main__':

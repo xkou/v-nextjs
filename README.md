@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## next.js
+
+### test cli
+`
+curl https://mazzzystar.github.io/2022/12/29/Run-CLIP-on-iPhone-to-Search-Photos/ | curl localhost:3001/api/readability -H 'Content-Type: application/x'  -d @-  | jq
+`
 
 ## Getting Started
 
