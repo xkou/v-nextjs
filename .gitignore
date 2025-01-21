@@ -35,3 +35,4 @@ yarn-error.log*
 *.pyc
 
 .pytest_cache
+pnpm-lock.yaml
