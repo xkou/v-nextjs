@@ -19,3 +19,8 @@ yarn dev
 ## notice
 
 npx yarn install before commit
+
+### docker 
+docker run -it -v $PWD:/w -w /w -p 3003:3003 --rm --name babel node:20 /usr/local/bin/node node_modules/next/dist/bin/next dev --port 3003
+
+docker run -d -v $PWD:/w -w /w -p 3003:3003 --name babel node:20 /usr/local/bin/node node_modules/next/dist/bin/next dev --port 3003

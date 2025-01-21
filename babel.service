@@ -1,0 +1,11 @@
+[Unit]
+Description=babel svr
+After=syslog.target network.target remote-fs.target
+[Service]
+KillSignal=SIGINT
+Restart=always
+RestartSec=10
+WorkingDirectory=/root/v-nextjs
+ExecStart=/usr/local/bin/node node_modules/next/dist/bin/next dev --port 3003
+[Install]
+WantedBy=multi-user.target
